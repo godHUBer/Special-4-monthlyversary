@@ -1,0 +1,225 @@
+/* ======================================= */
+/* 🛠️ CUSTOMIZABLE CSS VARIABLES 🛠️ */
+/* ======================================= */
+:root {
+    --primary-color: #fce4ec; /* Background: Very light pink */
+    --accent-color: #e91e63;  /* Primary Accent: Deep pink/Rose */
+    --text-color: #4a148c;    /* Deep Purple for main text */
+    --highlight-bg: #fff0f5;  /* Light background for boxes */
+    --font-heading: 'Georgia', serif; /* Heading Font */
+    --font-body: 'Arial', sans-serif; /* Body Font */
+    --transition-speed: 0.5s; /* General transition duration */
+}
+
+/* ======================================= */
+/* BASE STYLES & LAYOUT */
+/* ======================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: var(--font-body);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#app-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: opacity var(--transition-speed) ease-in-out;
+    min-height: 500px; /* Ensure consistent height */
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Text Styles */
+.title-large { font-size: 3em; color: var(--accent-color); font-family: var(--font-heading); }
+.title-extra-large { font-size: 5em; margin: 0; line-height: 1; color: var(--accent-color); }
+.title-small { font-size: 1.5em; text-transform: uppercase; letter-spacing: 2px; }
+.highlighted-text { color: var(--accent-color); font-weight: bold; }
+
+/* ======================================= */
+/* BUTTONS & NAVIGATION */
+/* ======================================= */
+.nav-button {
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    background-color: transparent;
+    color: var(--accent-color);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover:not(.disabled) {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.nav-buttons { display: flex; justify-content: space-between; width: 100%; max-width: 300px; margin-top: 30px; }
+
+/* ======================================= */
+/* PAGE SPECIFIC STYLES */
+/* ======================================= */
+
+/* Page 1 & 6 */
+.apology-box,.conclusion-box {
+    background: var(--highlight-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Page 2 - Letter */
+.letter-box {
+    text-align: left;
+    line-height: 1.6;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.salutation,.closing { font-style: italic; font-weight: bold; margin-top: 15px; }
+
+/* Page 3 - Heart Grid */
+.heart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 250px;
+    height: 250px;
+    border: 1px solid var(--accent-color);
+}
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+}
+.center-button {
+    background-color: var(--highlight-bg);
+    border: 3px solid var(--accent-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.center-button:hover { background-color: var(--primary-color); }
+.filled-heart {
+    background-color: var(--accent-color)!important;
+    color: white!important;
+    content: '♥'; /* Updated by JS */
+}
+
+/* Page 4 - Audio Player */
+.song-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: var(--highlight-bg);
+    border-radius: 10px;
+}
+.player-visual { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+.custom-audio { width: 80%; }
+
+/* Page 5 - Gallery (New Styles) */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 550px;
+    margin-top: 20px;
+}
+.gallery-item {
+    flex: 1 1 30%; /* Ensures three items per row */
+    min-width: 120px;
+    background: var(--highlight-bg);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.gallery-image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid var(--accent-color);
+    margin-bottom: 5px;
+}
+.closing-note { font-style: italic; margin-top: 10px; }
+
+
+/* ======================================= */
+/* 🎨 ANIMATIONS (CUSTOMIZE HERE) 🎨 */
+/* ======================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-slow {
+    animation: fadeIn 1.2s ease-out both;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1.2s ease-out 0.3s both;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out both;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out both;
+}

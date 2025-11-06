@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message For You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app-container">
+
+        <section class="page" id="page-1">
+            <h1 class="title-large fade-in-slow">FOR MY <span class="highlighted-text">KUCHUPUCHU</span></h1>
+            <div class="apology-box fade-in-delay">
+                <p class="apology-text">I am really</p>
+                <h4 class="title-extra-large highlighted-text">IN LOVE WITH YOU</h4>
+                <p>I made this specially just for you Sam, As my gift to you on our 4th monthlyversary. Take a deep breath, read slowly, and check what I made for you ♡.</p>
+            </div>
+            <img src="assets/image_1.png" alt="Cute Illustration" class="page-image fade-in-slow">
+            <button class="nav-button next" data-target="2">Next →</button>
+        </section>
+
+        <section class="page hidden" id="page-2">
+            <h1 class="title-small">A LETTER FOR YOU ⋄</h1>
+            <div class="letter-box slide-up">
+                <p class="salutation">My Dearest <span class="highlighted-text">Samriddhi</span>,</p>
+                <p>Every moment spent with you confirms that you are my greatest adventure and the keeper of my happiest future. ♡.</p>
+                <p class="closing">With all my love — Your <span class="highlighted-text">Darling <333</span> ♡</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-button back" data-target="1">← Back</button>
+                <button class="nav-button next" data-target="3">Next →</button>
+            </div>
+        </section>
+
+        <section class="page hidden" id="page-3">
+            <h1 class="title-small">Fill the heart to continue</h1>
+            <div class="heart-grid">
+                <span class="grid-item heart-icon">♡</span>
+                <span class="grid-item X">X</span>
+                <span class="grid-item X">X</span>
+                <span class="grid-item X">X</span>
+                <button class="grid-item center-button" id="heart-trigger">Click Here</button>
+                <span class="grid-item X">X</span>
+                <span class="grid-item X">X</span>
+                <span class="grid-item X">X</span>
+                <span class="grid-item heart-icon">♡</span>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-button back" data-target="2">← Back</button>
+                <button class="nav-button next disabled" id="next-3" data-target="4">Next →</button>
+            </div>
+        </section>
+
+        <section class="page hidden" id="page-4">
+            <h1 class="title-small">Songs Dedicated To You ♡</h1>
+            <div class="song-player">
+                <img src="assets/image_4_song.png" alt="Dedicated Song Visual" class="player-visual pulse-animation highlighted-image-src">
+                <p class="song-title highlighted-text">Dil Cheez Tujhe Dedi</p>
+                <audio controls class="custom-audio">
+                    <source src="assets/dedication.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-button back" data-target="3">← Back</button>
+                <button class="nav-button next" data-target="5">Next →</button>
+            </div>
+        </section>
+        <section class="page hidden" id="page-5">
+            <h1 class="title-small">GALLERY: Moments for Us ♡</h1>
+            <p class="gallery-intro">Here are a few special memories, just for you:</p>
+            
+            <div class="gallery-container slide-in-right">
+                <div class="gallery-item">
+                    <img src="assets/gallery_1.png" alt="Memory 1" class="gallery-image highlighted-image-src">
+                    <p class="caption highlighted-text">Us In Schoo Uniform</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_2.png" alt="Memory 2" class="gallery-image highlighted-image-src">
+                    <p class="caption highlighted-text">Our First Meet</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_3.png" alt="Memory 3" class="gallery-image highlighted-image-src">
+                    <p class="caption highlighted-text">Our First Date</p>
+                </div>
+            </div>
+            
+            <p class="closing-note">with love, Your Madam Ji ♡</p>
+
+            <div class="nav-buttons">
+                <button class="nav-button back" data-target="4">← Back</button>
+                <button class="nav-button next" data-target="6">Next →</button>
+            </div>
+        </section>
+        <section class="page hidden" id="page-6">
+            <h1 class="title-large fade-in-slow">FOR MY LOVE ⋄</h1>
+            <div class="conclusion-box">
+                <h2 class="title-extra-large highlighted-text">Thank You</h2>
+                <h3>FOR BEING MINE</h3>
+                <p>I hope this little space made you smile ♡ You are my favorite part of every day — always.</p>
+                <p class="closing-signature">made with ♡ and sparkles — forever yours ♡</p>
+            </div>
+            <button class="nav-button back" data-target="5">← Back</button>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
